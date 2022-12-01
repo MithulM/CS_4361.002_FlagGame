@@ -103,19 +103,7 @@ public class MeshGenerator : MonoBehaviour
         // To use this, your MeshGenerator GameObject needs to have a mesh collider
         // component added to it.  Then, just re-enable the code below.
         mesh.RecalculateBounds();
-        /*MeshCollider meshCollider = gameObject.GetComponent<MeshCollider>();
-        meshCollider.sharedMesh = mesh;*/
+        MeshCollider meshCollider = gameObject.GetComponent<MeshCollider>();
+        meshCollider.sharedMesh = mesh;
     }
-
-    /*Optionally, draw spheres at each vertex
-    private void OnDrawGizmos()
-    {
-        if (vertices == null)
-            return;
-
-        for (int i=0; i<vertices.Length; i++)
-        {
-            Gizmos.DrawSphere(vertices[i], 0.1f);
-        }
-    }*/
 }
