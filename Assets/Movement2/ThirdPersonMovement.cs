@@ -13,7 +13,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private float gravity = -9.8f;
     private bool isGrounded;
-    private float groundCheckDistance = 0.5f;
+    private float groundCheckDistance = 0.25f;
     [SerializeField] private LayerMask groundMask;
 
     private CharacterController controller;

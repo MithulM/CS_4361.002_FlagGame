@@ -88,6 +88,8 @@ public class MeshGenerator : MonoBehaviour
             if (normalizedY <= 0.33) colors[i] = bottom;
             else if (normalizedY > 0.33 && normalizedY <= 0.50) colors[i] = middle;
             else colors[i] = top;
+
+            colors[i] = Color.Lerp(bottom, top, normalizedY);
         }
     }
 

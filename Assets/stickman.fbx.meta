@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bb07a7acbcf336b45945c0022ea94a85
+guid: 615133e76132e9b4fa1032bcc7335c57
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -187,11 +187,11 @@ ModelImporter:
     - boneName: UpperArm.R
       humanName: RightUpperArm
       limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        min: {x: -90, y: -100, z: -20}
+        max: {x: 90, y: 100, z: 100}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: LowerArm.L
       humanName: LeftLowerArm
       limit:

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FlagGame : MonoBehaviour
 {
+    //public Player p;
     public int gridLength = 9;
     public GameObject gridPrefab;
     int[,] gameBoard;
@@ -43,17 +44,17 @@ public class FlagGame : MonoBehaviour
             {
                 if (gameBoard[i, j] == 0 || gameBoard[i, j] == 5)
                 {
-                    v = 0f;
+                    v = 0.3f;
                     b = Color.green;
                     m = Color.green;
                     t = Color.green;
-                }
+                }              
                 else if (gameBoard[i, j] == 2)
-                {
+                {               
                     v = Random.Range(4f, 20f);
-                    b = Color.red;
+                    b = new Color(111/255f, 78/255f, 55/255f, 1f);               
                     m = Color.green;
-                    t = Color.grey;
+                    t = new Color(111 / 255f, 78 / 255f, 55 / 255f, 1f);
                 }
                 else if (gameBoard[i, j] == 3)
                 {
@@ -89,7 +90,7 @@ public class FlagGame : MonoBehaviour
                 terrain[i, j] = location;
             }
         }
-        combine();
+        //combine();
     }
 
     void createPath(int n)
@@ -205,7 +206,7 @@ public class FlagGame : MonoBehaviour
         }
         return;
     }
-
+    /*
     void combine()
     {
         MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
@@ -224,10 +225,13 @@ public class FlagGame : MonoBehaviour
         transform.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
         transform.gameObject.SetActive(true);
     }
+    */
 
     // Update is called once per frame
     void Update()
     {
-
+        //MeshGenerator m = terrain[flagX, flagY].GetComponent(typeof(MeshGenerator)) as MeshGenerator;
+        
+        //if(p.x)
     }
 }
